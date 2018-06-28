@@ -38,18 +38,22 @@ function merge(left, right, array) {
 
 
 function mergeSort(array) {
+  // base case
+  // if the array's length is less than or equal to 1
   if (array.length <= 1) {
+    // return the array
     return array;
   }
 
-  const middle = Math.floor(array.length / 2);
-  let left = array.slice(0, middle);
-  let right = array.slice(middle, array.length);
+  const middle = Math.floor(array.length / 2); // the middle is the array's length divided by 2
+  let left = array.slice(0, middle); // left from the middle
+  let right = array.slice(middle, array.length); // right from the middle
 
-  left = mergeSort(left);
-  right = mergeSort(right);
+  left = mergeSort(left); // recursive call to the left 
+  right = mergeSort(right); // recursive call to the right
   
-  return merge(left, right, array);
+  // return the entire sorted array via the merge() call, passing in the left, right, and array
+  return merge(left, right, array); 
 }
 
 let array = [
