@@ -1,3 +1,5 @@
+'use strict';
+
 /*
   create a function that takes an array a start and an end
   create a partition function that will go throught the split array and swap numbers

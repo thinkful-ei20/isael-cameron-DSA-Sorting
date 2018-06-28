@@ -32,6 +32,7 @@ function merge(left, right, array) {
     array[outputIndex++] = right[i];
   }
   // return the merged array
+  console.log(array);
   return array;
 }
 
